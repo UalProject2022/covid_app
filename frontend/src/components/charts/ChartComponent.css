@@ -1,0 +1,13 @@
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}

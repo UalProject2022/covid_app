@@ -1,0 +1,63 @@
+services:
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=ual-mariadb
+      - MYSQL_USER=ualdbuser
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+  web:
+    container_name: covid_app
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: >
+      bash -c "pip install --upgrade -r requirements.txt && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin
+    links:
+      - db
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - UPLOAD_LIMIT=300M
+    restart: always
+    ports:
+      - 8081:80
+
+  react-app:
+    container_name: react_app
+    links:
+      - web
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 5173:5173
+    volumes:
+      - ./frontend:/react/app
+      - notused:/react/app/node_modules
+    restart: always
+
+
+networks:
+  default:
+    external:
+      name: ual_net
+
+volumes:
+  mariadb_data:
+  notused:

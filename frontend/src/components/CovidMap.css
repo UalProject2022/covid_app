@@ -1,0 +1,12 @@
+.mapDiv {
+  height: 90vh;
+  text-align: center;
+}
+
+.loadAnimationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 56.205vh;
+}

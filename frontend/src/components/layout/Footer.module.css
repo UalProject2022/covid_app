@@ -1,0 +1,87 @@
+.footer {
+  font-size: 20px;
+  color: white;
+  background-color: maroon;
+  position: relative;
+  bottom: 0;
+  margin-top: 3rem;
+}
+
+.content {
+  bottom: 0;
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-template-columns: repeat(4, minmax(270px, 12%));
+  grid-gap: 20px;
+  text-align: center;
+}
+
+.hr {
+  width: 80%;
+  border: none;
+  height: 5px;
+  background-color: #BF0000;
+  border-radius: 2px;
+}
+
+.copyright {
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.pContentLogo {
+  font-size: 15px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pContentLogo i {
+  margin-right: 25px;
+}
+
+.divInfo {
+  height: 113px;
+}
+
+.pContentInfo {
+  font-size: 15px;
+  text-align: left;
+  margin: 6px;
+}
+
+.pContentPfP {
+  font-size: 15px;
+  margin: 6px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imgPfp {
+  border-radius: 50%;
+}
+
+.divContact {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.divContact p {
+  margin: 5px;
+}
+
+.divContact a {
+  text-decoration: none;
+  color: white
+}
+
+.copyBtn {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}

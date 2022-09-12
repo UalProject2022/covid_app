@@ -1,0 +1,23 @@
+.welcome {
+  font-size: 20px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #f3f4f7;
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f3f4f7;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  height: 33vh;
+}
+
+.card p {
+  margin: 3px;
+}

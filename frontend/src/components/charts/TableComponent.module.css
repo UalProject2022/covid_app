@@ -1,0 +1,85 @@
+.tableWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.divTable {
+  margin-top: 2rem;
+  width: 80vw;
+  overflow: auto;
+}
+
+.table {
+  width: 80vw;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table th {
+  padding: 12px;
+  text-align: center;
+  background-color: #7773c7;
+  color: white;
+}
+
+.span {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  margin-left: -289.6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.paginationBtn {
+  text-align: right;
+  font: inherit;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  padding: 0.2rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.pageSize {
+  background-color: #fff;
+  padding: 0.2rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
